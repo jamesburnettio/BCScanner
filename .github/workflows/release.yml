@@ -65,6 +65,9 @@ jobs:
           modules: 'qtserialport'
           cache: true
 
+      - name: Install NSIS
+        run: choco install nsis --no-progress -y
+
       - name: Build
         run: |
           cmake -B build -DCMAKE_BUILD_TYPE=Release
